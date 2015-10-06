@@ -1,4 +1,25 @@
 1. async google analytics script
 2. store pictures instead of linking to them
-3. media on print css
-4. replace img, css, and js with optimized contents
+3. inlined css
+4. replace img and js with optimized contents
+
+
+
+pizza.html -> main.js
+
+1. Line 527, lower 'i' 
+
+
+2. Line 452, store document.querySelectorAll(".randomPizzaContainer") as a variable, use that in function
+3. replace querySelectorAll with getElementsByClassName()
+old:
+	for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
+      var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
+      var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
+      document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
+    }
+  }
+
+4. move determineDX before for loop, have it run only once. all pizzas will be the same size
+
+5. line 507, replace querySelectorAll with getElementsByClassName()
