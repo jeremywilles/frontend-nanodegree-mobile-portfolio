@@ -502,7 +502,9 @@ function updatePositions() {
     var remainder = i%5;
     //var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     //console.log(phase, document.body.scrollTop / 1250)
-    items[i].style.left = items[i].basicLeft + 100 * holder[remainder] + 'px';
+    //items[i].style.left = items[i].basicLeft + 100 * holder[remainder] + 'px';
+    var trans = items[i].basicLeft + 100 * holder[remainder] + 'px';
+    items[i].style.transform = trans;
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
