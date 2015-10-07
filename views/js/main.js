@@ -441,6 +441,7 @@ var resizePizzas = function(size) {
     //store document.querySelectorAll(".randomPizzaContainer") into a variable and replaced with getElementsbyClassName()
     var storedPizza = document.getElementsByClassName("randomPizzaContainer");
     var dx = determineDx(storedPizza[0], size);
+    //no more for loop, find the dx number once, store with CSS
     var newwidth = (storedPizza[0].offsetWidth + dx) + 'px';
     document.querySelector(".randomPizzaContainer").style.width = newwidth
     
@@ -492,10 +493,16 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
   //replace querySelectorAll by getElementsByClassName
   var items = document.getElementsByClassName('mover');
+  var holder = [];
+  for(var k = 0; k<5; k++){
+    holder[i] = Math.sin((document.body.scrollTop / 1250) + k);
+  }
+
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    console.log(phase, document.body.scrollTop / 1250)
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    var remainder = i%5;
+    //var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    //console.log(phase, document.body.scrollTop / 1250)
+    items[i].style.left = items[i].basicLeft + 100 * holder[remainder] + 'px';
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -516,7 +523,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
   //lower 'i' variable so 200 scolling pizzas are not generated
-  for (var i = 0; i < 20; i++) {
+  for (var i = 0; i < 30; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
