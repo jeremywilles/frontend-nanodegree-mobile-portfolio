@@ -508,9 +508,8 @@ function updatePositions() {
   //replace querySelectorAll by getElementsByClassName
   var items = document.getElementsByClassName('mover');
   for (var i = 0; i < items.length; i++) {
-    var q = 2;
     var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    console.log("phase: "+phase+" scrollTop: "+document.body.scollTop);
+    console.log(phase, document.body.scrollTop / 1250)
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
