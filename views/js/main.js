@@ -441,8 +441,9 @@ var resizePizzas = function(size) {
           console.log("bug in sizeSwitcher");
       }
     }
+    var sizePick = [0,0.25, 0.33, 0.5]
 
-    var newsize = sizeSwitcher(size);
+    var newsize = sizePick[size];
     var dx = (newsize - oldsize) * windowwidth;
 
     return dx;
