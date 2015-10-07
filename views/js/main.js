@@ -455,11 +455,10 @@ var resizePizzas = function(size) {
     var dx = determineDx(storedPizza[0], size);
       console.log("dx = "+dx)
       var newwidth = (storedPizza[0].offsetWidth + dx) + 'px';
-    for (var i = 0; i < storedPizza.length; i++) {
-      
-
-      storedPizza[i].style.width = newwidth;
-    }
+      document.querySelector(".randomPizzaContainer").style.width = newwidth
+    //for (var i = 0; i < storedPizza.length; i++) {
+    //  storedPizza[i].style.width = newwidth;
+    //}
   }
 
   changePizzaSizes(size);
