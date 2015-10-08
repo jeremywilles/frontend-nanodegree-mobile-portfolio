@@ -425,14 +425,10 @@ var resizePizzas = function(size) {
   function determineDx (elem, size) {
     var oldwidth = elem.offsetWidth;
     var windowwidth = document.querySelector("#randomPizzas").offsetWidth;
-    var oldsize = oldwidth / windowwidth;
-
-    
+    var oldsize = oldwidth / windowwidth;  
     var sizePick = [0,0.25, 0.33, 0.5]
-
     var newsize = sizePick[size];
     var dx = (newsize - oldsize) * windowwidth;
-
     return dx;
   }
 
@@ -444,7 +440,6 @@ var resizePizzas = function(size) {
     //no more for loop, find the dx number once, store with CSS
     var newwidth = (storedPizza[0].offsetWidth + dx) + 'px';
     document.querySelector(".randomPizzaContainer").style.width = newwidth;
-    
   }
 
   changePizzaSizes(size);
