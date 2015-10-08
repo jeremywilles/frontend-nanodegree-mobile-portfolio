@@ -505,6 +505,7 @@ function updatePositions() {
 
     //items[i].style.left = items[i].basicLeft + 100 * holder[remainder] + 'px';
     var trans = items[i].basicLeft + 100 * holder[remainder] + 'px';
+    console.log(trans);
     items[i].style.transform = "translateX("+trans+")";
   }
 
