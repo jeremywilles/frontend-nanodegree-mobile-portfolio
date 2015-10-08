@@ -504,8 +504,8 @@ function updatePositions() {
     //console.log(phase, holder[remainder]);
 
     //items[i].style.left = items[i].basicLeft + 100 * holder[remainder] + 'px';
-    var trans = items[i].basicLeft + 100*holder[remainder] -700 + 'px';
-    console.log(trans);
+    var trans = items[i].basicLeft + 100*holder[remainder] -500 + 'px';
+    //console.log(trans);
     items[i].style.transform = "translateX("+trans+")";
   }
 
@@ -527,7 +527,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var cols = 5;
   var s = 256;
   //lower 'i' variable so 200 scolling pizzas are not generated
-  for (var i = 0; i < 22; i++) {
+  for (var i = 0; i < 20; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
