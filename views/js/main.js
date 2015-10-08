@@ -504,7 +504,7 @@ function updatePositions() {
     //console.log(phase, holder[remainder]);
 
     //items[i].style.left = items[i].basicLeft + 100 * holder[remainder] + 'px';
-    var trans = items[i].basicLeft/5 + 100*holder[remainder] + 'px';
+    var trans = items[i].basicLeft/2 + 75*holder[remainder] + 'px';
     console.log(trans);
     items[i].style.transform = "translateX("+trans+")";
   }
