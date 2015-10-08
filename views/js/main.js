@@ -503,9 +503,9 @@ function updatePositions() {
     var remainder = i%5;
     //console.log(phase, holder[remainder]);
 
-    items[i].style.left = items[i].basicLeft + 100 * holder[remainder] + 'px';
-    //var trans = items[i].basicLeft + 100 * holder[remainder] + 'px';
-    //items[i].style.transform = "translateY("+trans+")";
+    //items[i].style.left = items[i].basicLeft + 100 * holder[remainder] + 'px';
+    var trans = items[i].basicLeft + 100 * holder[remainder] + 'px';
+    items[i].style.transform = "translateX("+trans+")";
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
