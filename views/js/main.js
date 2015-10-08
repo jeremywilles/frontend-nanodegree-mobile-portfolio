@@ -498,10 +498,10 @@ function updatePositions() {
   for(var k = 0; k<5; k++){
     holder[k] = Math.sin(( top/ 1250) + k);
   }
-  //var len = items.length;
-  for (var i = 0; i < 5; i++) {
-    //var remainder = i%5;
-    var trans = items[i].basicLeft + 100*holder[i] -500 + 'px';
+  var len = items.length;
+  for (var i = 0; i < len; i++) {
+    var remainder = i%5;
+    var trans = items[i].basicLeft + 100*holder[remainder] -500 + 'px';
     //items[i].style.transform = "translateX("+trans+")";
     document.querySelector(".mover").style.transform = "translateX("+trans+")";
   }
