@@ -496,7 +496,7 @@ function updatePositions() {
   var holder = [];
   var top = document.body.scrollTop;
   for(var k = 0; k<5; k++){
-    holder[i] = Math.sin(( top/ 1250) + k);
+    holder[k] = Math.sin(( top/ 1250) + k);
   }
 
   var len = items.length;
