@@ -499,12 +499,14 @@ function updatePositions() {
     holder[i] = Math.sin(( top/ 1250) + k);
   }
 
-  for (var i = 0; i < items.length; i++) {
+  var len = items.length;
+  var temp = items[0].basicLeft;
+  for (var i = 0; i < len; i++) {
     var remainder = i%5;
     //var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     //console.log(phase, document.body.scrollTop / 1250)
     //items[i].style.left = items[i].basicLeft + 100 * holder[remainder] + 'px';
-    var trans = items[i].basicLeft + 100 * holder[remainder] + 'px';
+    var trans = temp + 100 * holder[remainder] + 'px';
     items[i].style.left = trans;
   }
 
