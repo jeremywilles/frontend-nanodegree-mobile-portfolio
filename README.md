@@ -1,14 +1,31 @@
 
+Steps to use this:
+
+1. Launch index.html -> this will bring you to the home page
+2. Click on any link
+3. First three links take you to static informational pages
+4. Fourth link, Cam's Pizzeria takes to you a site with interactive content
+5. Scrolling up or down will result in the pizzas in the background moving!
+6. Right below the 'Our Pizzas!' is a slider. You can use the slider to change the size 
+   of the pizza. Three options are available: small, medium and large
+
+*******************Optimization Steps************************************
+
 page speed insights steps for score greater than 90
 
 1. async google analytics script
+
 2. store pictures instead of linking to them
+
 3. inlined css
+
 4. replace img and js with optimized contents
 
 
 
 pizza.html -> main.js
+
+<5ms pizza updates
 
 
 1. Remove switch statement in determineDx function replaced with array
