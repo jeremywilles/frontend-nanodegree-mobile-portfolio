@@ -524,7 +524,7 @@ window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
-  var cols = 8;
+  var cols = 5;
   var s = 256;
   //lower 'i' variable so 200 scolling pizzas are not generated
   for (var i = 0; i < 22; i++) {
