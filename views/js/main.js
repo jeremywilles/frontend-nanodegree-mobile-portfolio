@@ -502,8 +502,7 @@ function updatePositions() {
   for (var i = 0; i < len; i++) {
     var remainder = i%5;
     var trans = items[i].basicLeft + 100*holder[remainder] -500 + 'px';
-    //items[i].style.transform = "translateX("+trans+")";
-    document.querySelector(".mover").style.transform = "translateX("+trans+")";
+    items[i].style.transform = "translateX("+trans+")";
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
