@@ -501,8 +501,9 @@ function updatePositions() {
   var len = items.length;
   for (var i = 0; i < len; i++) {
     var remainder = i%5;
-    //var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    //console.log(phase, document.body.scrollTop / 1250)
+    var phase = Math.sin((top / 1250) + (i % 5));
+    console.log(phase, holder[remainder]);
+
     //items[i].style.left = items[i].basicLeft + 100 * holder[remainder] + 'px';
     var trans = items[i].basicLeft + 100 * holder[remainder] + 'px';
     items[i].style.transform = "translateY("+trans+")";
